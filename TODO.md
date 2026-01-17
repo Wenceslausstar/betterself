@@ -1,0 +1,4 @@
+- [x] Update prototype/index.html to add two columns in the mission section with images and paragraphs for Mission and Vision.
+- [x] Modify prototype/styles.css to ensure the mission grid displays as two columns on larger screens.
+- [x] Test the layout on different screen sizes.
+- [x] Ensure images load correctly.

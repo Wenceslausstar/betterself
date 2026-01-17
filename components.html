@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Components — Careful Balance Counseling</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      main {
+        max-width: 1100px;
+        margin: 2rem auto;
+        padding: 0 1rem;
+      }
+      .example {
+        margin: 1rem 0;
+        padding: 1rem;
+        background: var(--stone);
+        border-radius: 10px;
+      }
+      pre {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1rem;
+        overflow: auto;
+        border: 1px solid rgba(16, 32, 33, 0.03);
+      }
+      h1,
+      h2 {
+        margin: 0 0 0.5rem;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+      }
+      @media (min-width: 760px) {
+        .grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Component Library</h1>
+      <p class="muted">
+        Reusable components with recommended markup and accessibility notes.
+      </p>
+
+      <section aria-labelledby="buttons">
+        <h2 id="buttons">Buttons</h2>
+        <div class="example">
+          <div class="row">
+            <button class="btn primary">Primary</button>
+            <button class="btn ghost">Ghost</button>
+            <button class="btn link">Link</button>
+            <button class="btn primary btn--lg">Primary large</button>
+            <button class="btn primary btn--sm" disabled>Small disabled</button>
+            <button class="icon-btn" aria-label="Help"><span>?</span></button>
+          </div>
+          <pre>&lt;button class="btn primary"&gt;Primary&lt;/button&gt;</pre>
+          <p class="muted small">
+            Use primary for the main action on the page (book, submit). Ensure
+            visible focus states and disabled state for unavailable actions.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="forms">
+        <h2 id="forms">Forms (fields & validation)</h2>
+        <div class="example">
+          <form>
+            <div class="field">
+              <label for="sample-name">Full name</label>
+              <input
+                id="sample-name"
+                class="input"
+                type="text"
+                placeholder="Jane Doe"
+              />
+              <div class="form-help">How you'd like us to address you.</div>
+            </div>
+
+            <div class="field">
+              <label for="sample-email">Email</label>
+              <input
+                id="sample-email"
+                class="input"
+                type="email"
+                aria-invalid="true"
+                value=""
+                placeholder="you@example.com"
+              />
+              <div class="form-error">Please enter a valid email address.</div>
+            </div>
+
+            <div class="field field--inline">
+              <div class="checkbox">
+                <input id="consent-demo" type="checkbox" />
+                <label for="consent-demo">I consent to be contacted</label>
+              </div>
+              <div class="muted small">Required to schedule</div>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Request</button>
+              <button class="btn ghost" type="button">Cancel</button>
+            </div>
+          </form>
+          <pre>&lt;input class="input" aria-invalid="true" /&gt;</pre>
+          <p class="muted small">
+            Use <code>aria-invalid="true"</code> on inputs with errors and
+            provide nearby text with clear, concise guidance for correction.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="cards">
+        <h2 id="cards">Cards</h2>
+        <div class="grid">
+          <div class="example card">
+            <h3>Standard card</h3>
+            <p class="muted">
+              Use for service summaries or highlighted content.
+            </p>
+            <p><a class="btn ghost" href="#">Learn more</a></p>
+          </div>
+
+          <div class="example card card--lift">
+            <h3>Lifted card</h3>
+            <p class="muted">Use for primary promotional content or CTAs.</p>
+            <p><a class="btn primary" href="#">Book now</a></p>
+          </div>
+        </div>
+        <pre>&lt;div class="card"&gt;...&lt;/div&gt;</pre>
+      </section>
+
+      <a href="design-system.html" class="back">← Back to design system</a>
+    </main>
+  </body>
+</html>

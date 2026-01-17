@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Design System — Careful Balance Counseling</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .ds-wrap {
+        padding: 2rem;
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      .swatches {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+      .swatch {
+        width: 160px;
+        height: 92px;
+        border-radius: 10px;
+        padding: 1rem;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        box-shadow: 0 6px 18px rgba(16, 32, 33, 0.06);
+      }
+      .swatch small {
+        opacity: 0.9;
+        font-size: 0.85rem;
+      }
+      .token-row {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 0.75rem;
+      }
+      .type-samples h1 {
+        margin: 0.25rem 0;
+      }
+      .component-sample {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+        max-width: 420px;
+      }
+      .logo-sample img {
+        max-height: 64px;
+      }
+      a.back {
+        display: inline-block;
+        margin-top: 1rem;
+        color: var(--accent);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="ds-wrap">
+      <h1>Design System</h1>
+      <p class="muted">
+        A living reference of colors, typography, and components for the Careful
+        Balance Counseling site.
+      </p>
+
+      <section aria-labelledby="colors">
+        <h2 id="colors">Colors & Tokens</h2>
+        <p class="muted">
+          Use these core tokens for UI components, backgrounds, and
+          accessibility-conscious accents.
+        </p>
+        <div class="swatches">
+          <div class="swatch" style="background: var(--accent)">
+            <strong>--accent</strong>
+            <small>#176B60</small>
+          </div>
+          <div class="swatch" style="background: var(--accent-600)">
+            <strong>--accent-600</strong>
+            <small>#14594F</small>
+          </div>
+          <div
+            class="swatch"
+            style="background: var(--accent-soft); color: #05302b"
+          >
+            <strong>--accent-soft</strong>
+            <small>#BEE8E0</small>
+          </div>
+          <div class="swatch" style="background: var(--stone); color: #0c2222">
+            <strong>--stone</strong>
+            <small>#F1F6F5</small>
+          </div>
+          <div class="swatch" style="background: var(--card); color: #0c2222">
+            <strong>--card</strong>
+            <small>#FFFFFF</small>
+          </div>
+          <div class="swatch" style="background: var(--bg); color: #0c2222">
+            <strong>--bg</strong>
+            <small>#F7FBFA</small>
+          </div>
+        </div>
+        <div class="token-row">
+          <code>--focus-ring</code>
+          <code>--radius</code>
+        </div>
+      </section>
+
+      <section aria-labelledby="typography" style="margin-top: 1.5rem">
+        <h2 id="typography">Typography</h2>
+        <p class="muted">
+          Primary type: <strong>Inter</strong>. Use weight 600 for headings and
+          400 for body text for legibility.
+        </p>
+        <div class="type-samples">
+          <h1 style="font-size: var(--h1-size)">
+            H1 — Support that listens. Care that helps.
+          </h1>
+          <h2 style="font-size: var(--h2-size)">H2 — Services and support</h2>
+          <p class="lead">
+            Lead text / intro copy — a slightly larger body size for clarity and
+            emphasis.
+          </p>
+          <p>
+            Body text — standard paragraph copy in 16px base size, aligned to
+            left with 1.6 line-height for readability.
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="components" style="margin-top: 1.5rem">
+        <h2 id="components">Components</h2>
+        <p class="muted">
+          Interactive elements, form controls, and content containers; see the
+          full component library for markup examples and usage guidelines.
+        </p>
+        <div class="component-sample">
+          <div>
+            <button class="btn primary">Primary CTA</button>
+            <button class="btn ghost">Secondary</button>
+            <button class="btn link">Text link</button>
+          </div>
+          <div style="margin-top: 0.5rem">
+            <label
+              style="display: block; margin-bottom: 0.3rem; color: var(--muted)"
+              >Name</label
+            ><input
+              style="
+                padding: 0.6rem;
+                border-radius: 8px;
+                border: 1px solid #e1eeea;
+                width: 100%;
+              "
+              placeholder="Jane Doe"
+            />
+          </div>
+          <div style="margin-top: 0.5rem" class="logo-sample">
+            <img src="logo.jpg" alt="Careful Balance Counseling logo" />
+          </div>
+          <p style="margin-top: 0.75rem">
+            <a href="components.html" class="btn ghost"
+              >View full component library</a
+            >
+          </p>
+        </div>
+      </section>
+
+      <section aria-labelledby="imagery" style="margin-top: 1.5rem">
+        <h2 id="imagery">Imagery & Icons</h2>
+        <p class="muted">
+          Photography should be warm, inclusive, and non-clinical. Prefer candid
+          portraits and soft natural light. Avoid graphic or distressing
+          content.
+        </p>
+        <div class="swatches" style="gap: 1rem; margin-top: 1rem">
+          <figure style="max-width: 320px">
+            <img
+              src="assets/IMG-20251118-WA0019.jpg"
+              alt="Hero example — person practicing breathwork"
+              style="width: 100%; border-radius: 8px"
+            />
+            <figcaption class="muted small">
+              Hero example — use for banner
+            </figcaption>
+          </figure>
+          <figure style="max-width: 160px">
+            <img
+              src="assets/481251436_664430596253062_122384165361228352_n.jpg"
+              alt="Team portrait example"
+              style="width: 100%; border-radius: 8px"
+            />
+            <figcaption class="muted small">Team portrait</figcaption>
+          </figure>
+        </div>
+        <p class="muted small">
+          Icons: use simple line icons with consistent stroke width; prefer SVG
+          for crisp scaling.
+        </p>
+      </section>
+
+      <section aria-labelledby="guidelines" style="margin-top: 1.5rem">
+        <h2 id="guidelines">Quick guidelines</h2>
+        <ul>
+          <li>
+            Use <code>--accent</code> for primary CTAs and prominent interactive
+            elements.
+          </li>
+          <li>
+            Use soft surfaces (<code>--stone</code>, <code>--card</code>) for
+            cards and forms to create separation.
+          </li>
+          <li>
+            Keep body text at 16px with 1.6 line-height; avoid long lines on
+            narrow screens by constraining content width.
+          </li>
+          <li>
+            For imagery, favor warm, inclusive photos or soft illustrations;
+            avoid clinical or distressing imagery.
+          </li>
+        </ul>
+      </section>
+
+      <a class="back" href="index.html">← Back to prototype</a>
+    </main>
+  </body>
+</html>
