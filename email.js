@@ -16,7 +16,7 @@
 
 const PUBLIC_KEY = "x3YLoc8JQ_6E1cM9s";
 const SERVICE_ID = "service_t0lpseu";
-const BOOKING_TEMPLATE_ID = "YOUR_BOOKING_TEMPLATE_ID";
+const BOOKING_TEMPLATE_ID = "template_ljpurpd";
 const NEWSLETTER_TEMPLATE_ID = "YOUR_NEWSLETTER_TEMPLATE_ID";
 
 emailjs.init(PUBLIC_KEY);
@@ -61,7 +61,7 @@ if (bookingForm) {
       showStatus(
         bookingConfirm,
         "Please confirm consent to be contacted before submitting.",
-        "error"
+        "error",
       );
       return;
     }
@@ -83,7 +83,7 @@ if (bookingForm) {
         showStatus(
           bookingConfirm,
           "Thank you! Your booking request has been sent.",
-          "success"
+          "success",
         );
         bookingForm.reset();
         setSubmitting(bookingForm, false);
@@ -92,11 +92,11 @@ if (bookingForm) {
         showStatus(
           bookingConfirm,
           "Oops! Something went wrong. Please try again.",
-          "error"
+          "error",
         );
         setSubmitting(bookingForm, false);
         console.error("EmailJS booking error:", error);
-      }
+      },
     );
   });
 }
@@ -134,11 +134,7 @@ if (newsletterForm) {
 
     emailjs.send(SERVICE_ID, NEWSLETTER_TEMPLATE_ID, formData).then(
       () => {
-        showStatus(
-          newsletterStatus,
-          "Thank you for subscribing!",
-          "success"
-        );
+        showStatus(newsletterStatus, "Thank you for subscribing!", "success");
         newsletterForm.reset();
         setSubmitting(newsletterForm, false);
       },
@@ -146,11 +142,11 @@ if (newsletterForm) {
         showStatus(
           newsletterStatus,
           "Oops! Something went wrong. Please try again.",
-          "error"
+          "error",
         );
         setSubmitting(newsletterForm, false);
         console.error("EmailJS newsletter error:", error);
-      }
+      },
     );
   });
 }
