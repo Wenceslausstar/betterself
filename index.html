@@ -449,75 +449,124 @@
         class="container resources"
         aria-labelledby="resources-heading"
       >
-        <h2 id="resources-heading">Resources</h2>
-        <div class="resource-grid">
-          <article class="resource-card card">
-            <img
-              src="assets/IMG-20251118-WA0016.jpg"
-              alt="Notebook with stress-management notes"
-              loading="lazy"
-            />
-            <h3><a href="">Coping strategies for stress</a></h3>
-            <p class="muted small">
-              Quick exercises and tools to manage daily stress.
-            </p>
-          </article>
-
-          <article class="resource-card card">
-            <img
-              src="assets/IMG-20251118-WA0015.jpg"
-              alt="Person journaling for self-care"
-              loading="lazy"
-            />
-            <h3><a href="">Self-care planning guide</a></h3>
-            <p class="muted small">
-              Practical steps to build a daily self-care routine.
-            </p>
-          </article>
-
-          <article class="resource-card card">
-            <img
-              src="assets/IMG-20251118-WA0012.jpg"
-              alt="Supportive hands and a cup of tea"
-              loading="lazy"
-            />
-            <h3><a href="">When to seek professional help</a></h3>
-            <p class="muted small">
-              Guidance on signs, next steps, and resources.
-            </p>
-          </article>
+        <div class="resources-header">
+          <h2 id="resources-heading">Resources</h2>
+          <p class="muted">
+            Practical reading to support your wellbeing between sessions.
+          </p>
         </div>
+
+        <article class="resource-featured">
+          <a class="resource-featured__link" href="#">
+            <div class="resource-featured__media">
+              <img
+                src="assets/IMG-20251118-WA0016.jpg"
+                alt="Notebook with stress-management notes"
+                loading="lazy"
+              />
+            </div>
+            <div class="resource-featured__body">
+              <span class="resource-tag">Featured · Stress</span>
+              <h3>Coping strategies for stress</h3>
+              <p>
+                A practical guide of grounding techniques, breathing exercises,
+                and journaling prompts you can use whenever stress builds up
+                — at work, at home, or in transit.
+              </p>
+              <span class="resource-cta">Read the guide <span aria-hidden="true">→</span></span>
+            </div>
+          </a>
+        </article>
+
         <div class="resource-grid">
-          <article class="resource-card card">
-            <img
-              src="assets/IMG-20251118-WA0001.jpg"
-              alt="A serene landscape"
-              loading="lazy"
-            />
-            <h3><a href="">Find Your Calm</a></h3>
-            <p class="muted small">Explore techniques to find inner peace.</p>
+          <article class="resource-card">
+            <a class="resource-card__link" href="#">
+              <div class="resource-card__media">
+                <img
+                  src="assets/IMG-20251118-WA0015.jpg"
+                  alt="Person journaling for self-care"
+                  loading="lazy"
+                />
+                <span class="resource-tag">Self-care</span>
+              </div>
+              <div class="resource-card__body">
+                <h3>Self-care planning guide</h3>
+                <p>Practical steps to build a daily self-care routine.</p>
+                <span class="resource-cta">Read more <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
 
-          <article class="resource-card card">
-            <img
-              src="assets/IMG-20251118-WA0003.jpg"
-              alt="Two people in a supportive conversation"
-              loading="lazy"
-            />
-            <h3><a href="">Building Connections</a></h3>
-            <p class="muted small">
-              Learn how to foster healthy relationships.
-            </p>
+          <article class="resource-card">
+            <a class="resource-card__link" href="#">
+              <div class="resource-card__media">
+                <img
+                  src="assets/IMG-20251118-WA0012.jpg"
+                  alt="Supportive hands and a cup of tea"
+                  loading="lazy"
+                />
+                <span class="resource-tag">Guidance</span>
+              </div>
+              <div class="resource-card__body">
+                <h3>When to seek professional help</h3>
+                <p>Guidance on signs, next steps, and resources.</p>
+                <span class="resource-cta">Read more <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
 
-          <article class="resource-card card">
-            <img
-              src="assets/IMG-20251118-WA0006.jpg"
-              alt="A person looking towards a brighter future"
-              loading="lazy"
-            />
-            <h3><a href="">Your Path to Growth</a></h3>
-            <p class="muted small">Resources for personal development.</p>
+          <article class="resource-card">
+            <a class="resource-card__link" href="#">
+              <div class="resource-card__media">
+                <img
+                  src="assets/IMG-20251118-WA0001.jpg"
+                  alt="A serene landscape"
+                  loading="lazy"
+                />
+                <span class="resource-tag">Mindfulness</span>
+              </div>
+              <div class="resource-card__body">
+                <h3>Find your calm</h3>
+                <p>Explore techniques to find inner peace.</p>
+                <span class="resource-cta">Read more <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="resource-card">
+            <a class="resource-card__link" href="#">
+              <div class="resource-card__media">
+                <img
+                  src="assets/IMG-20251118-WA0003.jpg"
+                  alt="Two people in a supportive conversation"
+                  loading="lazy"
+                />
+                <span class="resource-tag">Relationships</span>
+              </div>
+              <div class="resource-card__body">
+                <h3>Building connections</h3>
+                <p>Learn how to foster healthy relationships.</p>
+                <span class="resource-cta">Read more <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
+          </article>
+
+          <article class="resource-card">
+            <a class="resource-card__link" href="#">
+              <div class="resource-card__media">
+                <img
+                  src="assets/IMG-20251118-WA0006.jpg"
+                  alt="A person looking towards a brighter future"
+                  loading="lazy"
+                />
+                <span class="resource-tag">Growth</span>
+              </div>
+              <div class="resource-card__body">
+                <h3>Your path to growth</h3>
+                <p>Resources for personal development.</p>
+                <span class="resource-cta">Read more <span aria-hidden="true">→</span></span>
+              </div>
+            </a>
           </article>
         </div>
       </section>
