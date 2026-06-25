@@ -328,27 +328,60 @@
       <section
         id="testimonials"
         class="container testimonials"
-        aria-label="Client testimonials"
+        aria-labelledby="testimonials-heading"
       >
-        <h2>What people say</h2>
+        <div class="testimonials-header">
+          <h2 id="testimonials-heading">What people say</h2>
+          <p class="muted">
+            Real reflections from people we've walked alongside.
+          </p>
+        </div>
+
         <div class="testimonial-grid">
-          <blockquote>
-            <p>“I felt heard and supported from the very first session.”</p>
-            <footer>— Adult, 30s (anonymized)</footer>
-          </blockquote>
+          <figure class="testimonial-card">
+            <span class="testimonial-quote" aria-hidden="true">“</span>
+            <blockquote>
+              <p>I felt heard and supported from the very first session.</p>
+            </blockquote>
+            <figcaption>
+              <span class="testimonial-avatar" aria-hidden="true">A</span>
+              <span class="testimonial-meta">
+                <strong>Adult, 30s</strong>
+                <span class="muted small">Anonymized client</span>
+              </span>
+            </figcaption>
+          </figure>
+
+          <figure class="testimonial-card">
+            <span class="testimonial-quote" aria-hidden="true">“</span>
+            <blockquote>
+              <p>A safe, non-judgemental space — I left feeling lighter and clearer.</p>
+            </blockquote>
+            <figcaption>
+              <span class="testimonial-avatar" aria-hidden="true">C</span>
+              <span class="testimonial-meta">
+                <strong>Couple, 40s</strong>
+                <span class="muted small">Anonymized client</span>
+              </span>
+            </figcaption>
+          </figure>
+
           <div class="stats-card">
             <div class="dome-fill"></div>
-            <div class="stat-item">
-              <p class="stat-number" data-goal="18" data-plus="true">0</p>
-              <p class="stat-label">Years in Business</p>
-            </div>
-            <div class="stat-item" data-main-stat="true">
-              <p class="stat-number" data-goal="2450" data-plus="true">0</p>
-              <p class="stat-label">Satisfied Clients</p>
-            </div>
-            <div class="stat-item">
-              <p class="stat-number" data-goal="10" data-plus="true">0</p>
-              <p class="stat-label">Team Members</p>
+            <h3 class="stats-card__title">Trusted by our community</h3>
+            <div class="stats-grid">
+              <div class="stat-item">
+                <p class="stat-number" data-goal="18" data-plus="true">0</p>
+                <p class="stat-label">Years in business</p>
+              </div>
+              <div class="stat-item" data-main-stat="true">
+                <p class="stat-number" data-goal="2450" data-plus="true">0</p>
+                <p class="stat-label">Satisfied clients</p>
+              </div>
+              <div class="stat-item">
+                <p class="stat-number" data-goal="10" data-plus="true">0</p>
+                <p class="stat-label">Team members</p>
+              </div>
             </div>
           </div>
         </div>
