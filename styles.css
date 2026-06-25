@@ -841,7 +841,7 @@ select:focus {
 }
 .trust-gallery {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 0.85rem;
 }
 .trust-gallery__item {
