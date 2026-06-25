@@ -774,6 +774,21 @@ select:focus {
   margin-top: 0.75rem;
 }
 /* Services */
+.services {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.services-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: linear-gradient(rgba(16, 32, 33, 0.55), rgba(16, 32, 33, 0.65)),
+    url("assets/IMG-20251118-WA0005.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 .services h2 {
   margin-top: 0;
   font-size: var(--h2-size);
