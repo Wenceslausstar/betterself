@@ -354,56 +354,94 @@
         </div>
       </section>
 
-      <section id="booking" class="booking container">
-        <h2>Book an appointment</h2>
-        <p class="muted">
-          We collect only necessary details. Sessions are private and secure.
-        </p>
-        <form id="booking-form" action="#" method="post" novalidate>
-          <div class="form-row">
-            <label for="name">Full name</label>
-            <input id="name" name="name" type="text" required />
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required />
-          </div>
-          <div class="form-row">
-            <label for="service">Service</label>
-            <select id="service" name="service">
-              <option>Individual Therapy</option>
-              <option>Couples & Marriage</option>
-              <option>Family Therapy</option>
-              <option>Grief & Loss</option>
-              <option>Trauma Therapy</option>
-              <option>Workplace Stress</option>
-              <option>Education Sector Mental Health Training</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="session-type">Session type</label>
-            <select id="session-type" name="session-type">
-              <option>Online</option>
-              <option>In person</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <label for="date">Preferred date</label>
-            <input id="date" name="date" type="date" />
-          </div>
-          <div class="form-row">
-            <label class="checkbox"
-              ><input type="checkbox" id="consent" required /> I consent to be
-              contacted about my appointment</label
-            >
-          </div>
-          <p class="form-actions">
-            <button class="btn primary" type="submit">
-              Request Appointment
-            </button>
-          </p>
-          <p id="booking-confirm" class="sr-only" aria-live="polite"></p>
-        </form>
+      <section id="booking" class="booking container" aria-labelledby="booking-heading">
+        <div class="booking-split">
+          <aside class="booking-intro">
+            <h2 id="booking-heading">Book an appointment</h2>
+            <p class="lead">
+              Take the first step toward clarity and healing. We'll reach
+              out within one business day to confirm your session.
+            </p>
+            <ul class="booking-points" role="list">
+              <li>
+                <span class="booking-point-icon" aria-hidden="true">✓</span>
+                Private, confidential, and judgement-free
+              </li>
+              <li>
+                <span class="booking-point-icon" aria-hidden="true">✓</span>
+                Online or in-person sessions available
+              </li>
+              <li>
+                <span class="booking-point-icon" aria-hidden="true">✓</span>
+                Licensed, trauma-informed clinicians
+              </li>
+            </ul>
+            <p class="booking-help muted small">
+              Prefer to talk first?
+              <a href="tel:+254758232888">Call +254 758 232 888</a>
+            </p>
+          </aside>
+
+          <form id="booking-form" class="booking-form" action="#" method="post" novalidate>
+            <fieldset class="form-group">
+              <legend>Your details</legend>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="name">Full name</label>
+                  <input id="name" name="name" type="text" autocomplete="name" required />
+                </div>
+                <div class="form-row">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" required />
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group">
+              <legend>Session preferences</legend>
+              <div class="form-grid">
+                <div class="form-row">
+                  <label for="service">Service</label>
+                  <select id="service" name="service">
+                    <option>Individual Therapy</option>
+                    <option>Couples &amp; Marriage</option>
+                    <option>Family Therapy</option>
+                    <option>Grief &amp; Loss</option>
+                    <option>Trauma Therapy</option>
+                    <option>Workplace Stress</option>
+                    <option>Education Sector Mental Health Training</option>
+                  </select>
+                </div>
+                <div class="form-row">
+                  <label for="session-type">Session type</label>
+                  <select id="session-type" name="session-type">
+                    <option>Online</option>
+                    <option>In person</option>
+                  </select>
+                </div>
+                <div class="form-row form-row--full">
+                  <label for="date">Preferred date</label>
+                  <input id="date" name="date" type="date" />
+                </div>
+              </div>
+            </fieldset>
+
+            <div class="form-row form-row--consent">
+              <label class="checkbox">
+                <input type="checkbox" id="consent" required />
+                <span>I consent to be contacted about my appointment.</span>
+              </label>
+            </div>
+
+            <p class="form-actions">
+              <button class="btn primary btn--lg" type="submit">
+                Request appointment
+              </button>
+              <span class="muted small">We reply within 1 business day.</span>
+            </p>
+            <p id="booking-confirm" class="sr-only" aria-live="polite"></p>
+          </form>
+        </div>
       </section>
 
       <section
