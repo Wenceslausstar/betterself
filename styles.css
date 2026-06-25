@@ -910,6 +910,7 @@ select:focus {
   align-items: center;
   gap: 1rem;
   text-align: center;
+  grid-column: 1 / -1;
 }
 .trust-cta p {
   margin: 0;
@@ -943,8 +944,6 @@ select:focus {
   .trust-gallery {
     grid-template-columns: 1fr;
     gap: 1rem;
-    position: sticky;
-    top: 1rem;
   }
   .trust-gallery__item {
     aspect-ratio: 4 / 5;
